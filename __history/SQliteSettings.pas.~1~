@@ -1,0 +1,11 @@
+unit SQliteSettings;
+
+interface
+
+uses Sqlite
+
+implementation
+
+
+
+end.

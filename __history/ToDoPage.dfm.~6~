@@ -1,0 +1,59 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'ToDo'
+  ClientHeight = 500
+  ClientWidth = 939
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ToDoList: TListBox
+    Left = 8
+    Top = 35
+    Width = 906
+    Height = 457
+    ItemHeight = 13
+    TabOrder = 0
+  end
+  object ToDoText: TEdit
+    Left = 8
+    Top = 8
+    Width = 825
+    Height = 21
+    TabOrder = 1
+  end
+  object ToDoAddButton: TButton
+    Left = 839
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'Add'
+    TabOrder = 2
+  end
+  object SqliteconnectionConnection: TSQLConnection
+    ConnectionName = 'SQLITECONNECTION'
+    DriverName = 'Sqlite'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=Sqlite'
+      'Database=C:\Users\fokso\Desktop\ToDo\Win32\Debug\ToDo.db')
+    Left = 912
+    Top = 392
+  end
+  object TodoTable: TSQLDataSet
+    CommandText = 'ToDo'
+    CommandType = ctTable
+    DbxCommandType = 'Dbx.Table'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SqliteconnectionConnection
+    Left = 912
+    Top = 440
+  end
+end
